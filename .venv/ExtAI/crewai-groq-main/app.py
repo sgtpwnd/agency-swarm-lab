@@ -16,7 +16,7 @@ def main():
 
     llm = ChatGroq(
             temperature=0, 
-            groq_api_key = st.secrets["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"], 
+            groq_api_key = st.secrets["GROQ_API_KEY"], 
             model_name=model
         )
 
