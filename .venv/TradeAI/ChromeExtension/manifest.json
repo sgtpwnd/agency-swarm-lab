@@ -1,0 +1,31 @@
+{
+  "name": "TradeAI Extension",
+  "description": "A Chrome Extension for trading automation integrated with AI.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": [
+      "tabs",
+      "storage",
+      "activeTab",
+      "background"
+  ],
+  "host_permissions": [
+      "<all_urls>",
+      "*://localhost/*"
+  ],
+  "background": {
+      "service_worker": "background.js"
+  },
+  "action": {
+      "default_popup": "popup.html"
+  },
+  "content_scripts": [
+      {
+          "matches": ["<all_urls>", "*://localhost/*"],
+          "js": ["content_script.js"]
+      }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}

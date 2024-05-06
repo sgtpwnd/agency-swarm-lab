@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TradeAI Extension</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 10px;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        input, button {
+            margin: 5px;
+        }
+        #signals, #status {
+            margin-top: 10px;
+            padding: 5px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>TradeAI Control Panel</h1>
+    <div>
+        <input type="text" id="marketData" placeholder="Enter market data or preferences">
+        <button id="fetchSignals">Fetch Signals</button>
+        <button id="executeTrades">Execute Trades</button>
+    </div>
+    <div id="signals">
+        <h2>Trading Signals</h2>
+        <pre id="signalsContent">No signals yet.</pre>
+    </div>
+    <div id="status">
+        <h2>Status</h2>
+        <pre id="statusContent">Awaiting actions...</pre>
+    </div>
+
+    <script type="module" src="popup.js"></script>
+</body>
+</html>

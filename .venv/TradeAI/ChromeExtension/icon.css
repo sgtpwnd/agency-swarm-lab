@@ -1,0 +1,17 @@
+/* icon.css */
+.icon {
+    width: 16px;
+    height: 16px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon::before {
+    content: '';
+    width: 12px; /* slightly smaller than the container to ensure visibility */
+    height: 12px;
+    background-color: blue; /* high contrast, solid color */
+    border-radius: 50%; /* makes the shape a circle */
+}
